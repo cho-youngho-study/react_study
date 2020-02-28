@@ -19,7 +19,7 @@ app.get('/api/customer', (req, res) => {
           {
             'id': 2,
             'image': 'https://placeimg.com/64/64/2',
-            'name': '나동빈',
+            'name': '조영호',
             'birthday': '960508',
             'gender': '남자',
             'job': '프로그래머'
