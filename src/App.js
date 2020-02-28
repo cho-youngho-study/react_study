@@ -1,6 +1,5 @@
 import React from 'react'
 import "./App.css"
-import Counter from "./component/Counter"
 import Customer from "./component/Customer"
 
 const customer = [
@@ -33,13 +32,25 @@ const customer = [
 function App(){
   return(
     <>
-    <Counter />
-    {
-      customer.map(c =>{
-        return <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} />
-      })
-    }
-    
+      <table>
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>이미지</th>
+            <th>이름</th>
+            <th>생년월일</th>
+            <th>성별</th>
+            <th>직업</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            customer.map(c =>{
+              return <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} />
+            })
+          }
+        </tbody>
+      </table>
     </>
   )
 }
