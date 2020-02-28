@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./component/Counter";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+  return(
+    <>
+    <Counter />
+    </>
+  )
 }
 
 export default App;
+
+// <script>
+// const text = document.querySelector("#text");
+// const increment = document.querySelector("#increment");
+// const decrement = document.querySelector("#decrement");
+
+// function onClickEvent(e){
+//     const id = e.target.id;
+//     const textValue = parseInt(text.innerText);
+//     if(id === 'increment'){
+//         text.innerText = textValue+1;
+//     }else if(id === 'decrement'){
+//         text.innerText = textValue-1;
+//     }
+// }
+
+// increment.addEventListener("click", onClickEvent);
+// decrement.addEventListener("click", onClickEvent);
+
+// </script>
