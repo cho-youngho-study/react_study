@@ -1,29 +1,26 @@
-import React, {Component} from 'react'
-import "./App.css"
-import Customer from "./component/Customer"
+import React, { Component } from "react";
+import "./App.css";
+import Customer from "./component/Customer";
 
-
-class App extends Component{
-
+class App extends Component {
   state = {
-    customers : ''
-  }
+    customers: ""
+  };
 
-  componentDidMount(){
+  componentDidMount() {
     this.callApi()
-    .then(res => this.setState({customers:res}))
-    .catch(err => console.log(err))
+      .then(res => this.setState({ customers: res }))
+      .catch(err => console.log(err));
   }
 
-  callApi = async () =>{
-    const response = await fetch('/api/customer');
-    console.log(response);
+  callApi = async () => {
+    const response = await fetch("/api/customer");
     const body = await response.json();
     return body;
-  }
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <>
         <table>
           <thead>
@@ -37,16 +34,26 @@ class App extends Component{
             </tr>
           </thead>
           <tbody>
-            {this.state.customers ? this.state.customers.map(c => {
-                return <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} />
-              }) : ''}
-            {console.log(this.state.customers)}
+            {this.state.customers
+              ? this.state.customers.map(c => {
+                  return (
+                    <Customer
+                      key={c.id}
+                      id={c.id}
+                      image={c.image}
+                      name={c.name}
+                      birthday={c.birthday}
+                      gender={c.gender}
+                      job={c.job}
+                    />
+                  );
+                })
+              : ""}
           </tbody>
         </table>
       </>
-    )
+    );
   }
 }
-
 
 export default App;

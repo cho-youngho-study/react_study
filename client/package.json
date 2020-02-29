@@ -6,21 +6,22 @@
     "@babel/core": "^7.8.6",
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.6",
-    "@material-ui/core": "^4.9.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "body-parser": "^1.19.0",
+    "create-react-app": "^3.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0"
   },
   "scripts": {
     "server": "nodemon --exec babel-node init.js",
-
-    "start" : "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -40,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "init.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
